@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { useRouter } from 'vue-router';
 import { toastService } from '../services/ToastService'
 
-
-const router = useRouter()
 
 const goToAbout = () => {
     toastService.success('Info')

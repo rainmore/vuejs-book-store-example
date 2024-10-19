@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { AppRoutePaths } from '../../AppRoutes';
 
-const getActivePathClass = (path: string): string => {
-  console.log($route.fullPath, path)
-  return $route.fullPath === path ? 'is-active' : 'aaaa'
-}
 </script>
 
 

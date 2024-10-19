@@ -33,7 +33,7 @@ export const appRouters = createRouter({
 })
 
 
-appRouters.beforeEach((to, from, next) => {
+appRouters.beforeEach((to, _from, next) => {
   if (to.meta?.requireAuth && !authService.isAuthenticated()) {
     next({path: AppRoutePaths.AUTH_LOGIN})
   }

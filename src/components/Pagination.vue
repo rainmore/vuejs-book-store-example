@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { PaginationService } from '../services/PaginationService';
+import { Page } from '../services/api/types';
 
 interface Props {
   paginationService: PaginationService,
-  page: Page<Any>
+  page: Page<any>
 }
 
 const { paginationService, page } = defineProps<Props>()
@@ -37,8 +38,9 @@ const { paginationService, page } = defineProps<Props>()
       </a>
     </template>
     <ul class="pagination-list">
-      <li v-for="(number, index) in paginationService.getPaginationRage(page)" :key="`pagination-page-item-${number + 1}-${index}`">
-        <template v-if="number == page.number ">
+      <li v-for="(number, index) in paginationService.getPaginationRage(page)"
+        :key="`pagination-page-item-${number + 1}-${index}`">
+        <template v-if="number == page.number">
           <a class="pagination-link is-current" aria-label="`Page ${number + 1}`" aria-current="page">
             {{ number + 1 }}
           </a>
