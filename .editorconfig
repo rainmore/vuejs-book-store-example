@@ -15,6 +15,10 @@ ij_smart_tabs = false
 ij_visual_guides = 80, 120, 140, 256
 ij_wrap_on_typing = false
 
+[{Makefile,**.mk}]
+# Use tabs for indentation (Makefiles require tabs)
+indent_style = tab
+
 [*.{md}]
 indent_size = 2
 
